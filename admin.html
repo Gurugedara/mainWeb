@@ -1,0 +1,177 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>AdminPanel_GG</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+     body {
+        position: relative; 
+     }
+     #section1 {
+    width: 100%;
+    height: 90%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 6px;
+    }
+    #section2 {
+    width: 100%;
+    height: 90%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 6px;
+    }
+    #section3 {
+    width: 100%;
+    height: 90%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 6px;
+    }
+    #section4 {
+    width: 100%;
+    height: 90%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 6px;
+    }
+    #section5 {
+    width: 100%;
+    height: 90%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 6px;
+    }
+    </style>
+
+  </head>
+  <body>
+    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+        <div class="mdl-layout__header-row">
+          <a class="mdl-layout-title" href="index.html"><img src="images/gg.png"></a>
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search">
+              <label class="mdl-textfield__label" for="search">Enter your query...</label>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+        <header class="demo-drawer-header">
+          <img src="images/favicon.png" class="demo-avatar">
+          <div class="demo-avatar-dropdown">
+            <span>Admin</span>
+   
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+            </ul>
+          </div>
+        </header>
+
+<!-- navigation bar -->
+
+        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800"> 
+          <a class="mdl-navigation__link" onclick="home()""><i class="mdl-color-text--blue-grey-400 material-icons" >home</i>Home</a>
+
+          <a class="mdl-navigation__link" onclick="section1()"><i class="mdl-color-text--blue-grey-400 material-icons" >add</i>Add Institutes</a>
+
+          <a class="mdl-navigation__link" onclick="section2()"><i class="mdl-color-text--blue-grey-400 material-icons" >person</i>Manage Admins</a>
+      </div>
+
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+<!-- Add Institutes section -->
+<div id="section1">
+  <h2>Add Institutes</h2>
+  <p>***</p>
+</div>
+<!-- Manage institute section -->
+<div id="section2">
+  <h2>Manage Institutes</h2>
+  <p>***</p>
+</div>
+<!-- unselect all sections -->    
+<script>           
+document.getElementById("section2").style.display = "none";
+document.getElementById("section1").style.display = "none"; 
+</script>
+<!-- Return home by unselecting -->
+      <script>         
+      function home() { 
+        document.getElementById("section2").style.display = "none";
+        document.getElementById("section1").style.display = "none"; 
+        }
+       </script>
+
+<!-- open Add Institutes section and close other sections -->
+<script>  
+function section1() {
+    var x = document.getElementById("section1");
+    x.style.display = "none";
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        document.getElementById("section2").style.display = "none";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+<!-- open Manage Admins section and close other sections -->
+<script>
+function section2() {
+    var x = document.getElementById("section2");
+    x.style.display = "none";
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        document.getElementById("section1").style.display = "none"; 
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+  </div>
+  </body>
+</html>
